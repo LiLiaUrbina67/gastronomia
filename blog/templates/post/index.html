@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block titulo %}Gastronomia Mundial{% endblock  %}
+
+{% block cuerpo %}
+    {% if categoria %}
+
+        <h1>Gastronomia {{ categoria.descripcion }}</h1>
+        {% for new in categoria.celebridad_set.all %}
+            <div>
+                
+                <a href="{% url 'blog:ver_Celebridad' new.id %}">
+                    <h2  align="center" class=" teal-text text-darken-2 z-depth-1">{{ new.titulo }}</h2>
+                </a>
+                <p>
+                    {{ new.contenido|truncatechars:250 }} <br>
+                    {{ new.autor.get_full_name }} publicado {{ new.f_pub}}
+                    {for categoria in new.categorias.all% }
+                        <a href="{% url 'blog:ver_Celebridad' new.id %}" class="white-tex">
+                            {{ categoria.descripcion }}
+                        </a>
+                 {% endfor %}
+                </p>
+            </div> 
+            
+         
+        
+       {% else %}
+
+    {% for new in news %}
+        <div>
+            <h2 class="white-text text-darken-2 z-depth-1">><a  href="{% url 'blog:ver_Celebridad' new.id %}"></a></h2>
+            <p>
+                {{ new.contenido|truncatechars:250 }} <br>
+                {{ new.autor.get_full_name }} publicado {{ new.f_pub}}
+                {for categoria in new categorias.all% }
+                <a href="{% url 'blog:ver_Celebridad' categoria.id %}" class="whithe text">
+                    {{ categoria.descripcion }}   
+            </p>
+        </div>
+     
+      
+    {% endfor %}
+        
+    {% endif %}
+    
+{% endblock  %}

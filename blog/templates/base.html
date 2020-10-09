@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<html>
+  <head>
+    
+     
+    <title>{% block titulo %}{% endblock  %}</title>
+     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">  
+    <link rel="icon" type="" href="https://lh3.googleusercontent.com/proxy/E9kdScbXEVpPF1RtOFJVeDfaTGTq5gorm1F6mJ_Z6MVASyNw1L0ivkW-zX-fjmEzmiMEfWtqM_LWeREbpvGM77DudtdxEmuvfoaiNrEqU6Jl8rzZlAkZQ971EIhGOFaw39L4DHrhKg">
+  </head>
+  <body  bgcolor="#e0e0e0 ">
+    
+     
+      
+
+    <!-- browser o explorador -->
+     
+      
+   
+        
+      <nav class="nav-extended grey darken-4 white-tex">
+        <div class="nav-wrapper">
+          <a href="{% url 'blog:home' %}" class="brand-logo"><font face="Lucida Handwriting">Gastronomia</a></font>
+        
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+            <li><a href="{% url 'blog:ver_Celebridad_categoria' 2 %}"><font face="Lucida Handwriting"> Europa</a></li></font>
+            <li><a href="{% url 'blog:ver_Celebridad_categoria' 3 %}"><font face="Lucida Handwriting">America</a></li></font>
+            <li><a href="{% url 'blog:ver_Celebridad_categoria' 5 %}"><font face="Lucida Handwriting">Asia</a></li></font>
+            <li><a href="{% url 'blog:ver_Celebridad_categoria' 6 %}"><font face="Lucida Handwriting">Africa</a></li></font>
+
+           </ul>
+        </div>
+        <div class="nav-content">
+          <ul class="tabs tabs-transparent">
+            <li class="tab"><a class="active" href="#test1"> creador</a></li>
+            <li class="tab"><a  href="#test2">Asignacion</a></li>
+            <li class="tab "><a href="#test3">Tema</a></li>
+            <li class="tab"><a href="#test4">Mensaje</a></li>
+          </ul>
+        </div>
+      </nav>
+    
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+      </ul>
+    
+      <div id="test1" class="col s12">Lilia Michelle Urbina Murillo.</div>
+      <div id="test2" class="col s12">este sitio es creado y formado en la clase de programacionIV.  </div>
+      <div id="test3" class="col s12">sibre Gastronomia en estos cuatro continentes.</div>
+      <div id="test4" class="col s12">La alimentación ha sido siempre un aspecto crucial para la especie humana. El modo en que obtenemos alimentos de la naturaleza condiciona cómo somos, cómo vivimos y cómo nos relacionamos.
+
+        Por supuesto, comer ha sido siempre una condición necesaria para permanecer vivos. Sin embargo, el acto de comer tiene su parte de goce. El mundo de la cocina y el arte de comer bien ha ido desarrollando
+         una mirada cultural hacia la alimentación y la gastronomía propia de cada lugar.</div>
+
+
+   
+   
+   <div class="parallax-container">
+     <div class="parallax">
+       <img src="https://dam.ngenespanol.com/wp-content/uploads/2018/11/5-gastronomia-paises-mundo.png" alt="">
+     </div>
+   </div>
+
+   
+  <div class="container" style="padding-botton:2em;">
+
+        {% block cuerpo %}
+        
+        {% endblock %}
+  </div>
+  
+  
+  
+<div class="parallax-container">
+    <div class="parallax">
+        <img src="https://www.fundacionibercaja.es/public/pub/img/china-transformada_45563.jpg" alt="">
+    </div>
+</div>  
+
+
+<footer class="page-footer grey darken-4">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="grey darken-4 white-text">El Mundo de la Gastronomia.</h5>
+        <p class="grey-text text-lighten-4">La alimentación ha sido siempre un aspecto crucial para la especie humana. El modo en que obtenemos alimentos de la naturaleza condiciona cómo somos, cómo vivimos y cómo nos relacionamos.
+
+          Por supuesto, comer ha sido siempre una condición necesaria para permanecer vivos. Sin embargo, el acto de comer tiene su parte de goce. El mundo de la cocina y el arte de comer bien ha ido desarrollando
+           una mirada cultural hacia la alimentación y la gastronomía propia de cada lugar.Gracias por visitar este sitio, esperamos regreses y recomiendes nuestra pagina.</p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="grey darken-4 white-text">Links a redes sociales.</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/?hl=es-la">Gastronomia INSTAGRAM</a></li>
+          <li><a class="grey-text text-lighten-3" href="https://web.facebook.com/?_rdc=1&_rdr">Gastronomia FACEBOOK</a></li>
+          <li><a class="grey-text text-lighten-3" href="https://www.youtube.com/watch?v=nHgNwwOLLTM">Gastronomia YOUTUBE</a></li>
+          <li><a class="grey-text text-lighten-3" href="https://mail.google.com/mail/u/0/#inbox">Email</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      Gastronomia mundial &copy; Lilia Michelle Urbina Clase de programacionIV
+    <a class="grey-text text-lighten-4 right" href="https://mail.google.com/mail/u/0/#sent">creador</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+              M.AutoInit();
+              });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems, );
+  });
+    </script>
+
+
+    </html>
+
+    
